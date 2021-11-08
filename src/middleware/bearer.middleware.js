@@ -17,4 +17,4 @@ function bearer(req, res, next) {
 
 }
 
-module.exports = bearer;
+module.exports = bearer ;
