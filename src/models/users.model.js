@@ -24,7 +24,6 @@ const Users = sequelize.define('User', {
       let token = jwt.sign(tokenObj, API_SECRET);
       return token;
     },
-  
   }
 });
 
