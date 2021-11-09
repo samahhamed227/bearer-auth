@@ -16,14 +16,7 @@ const Users = sequelize.define('User', {
     allowNull: false,
   },
   token: {
-    type: DataTypes.VIRTUAL, 
-    get() {
-      return jwt.sign({ username: this.username }, API_SECRET);
-    },
-    set(tokenObj) {
-      let token = jwt.sign(tokenObj, API_SECRET);
-      return token;
-    },
+    type: DataTypes.VIRTUAL
   }
 });
 
