@@ -3,9 +3,8 @@ const server = require('./src/server');
 const { db } = require('./src/models/index');
 
 db.sync()
-  .then(() => {
-    server.listen(3000 ||3030, () => {
-      console.log('Server UP');
-    });
-  });
+.then(() => {
+  server.start(process.env.PORT ||3000);
+})
+.catch(console.error)
 
